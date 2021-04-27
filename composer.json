@@ -1,0 +1,5 @@
+{
+    "require": {
+        "simps/mqtt": "^1.3"
+    }
+}
