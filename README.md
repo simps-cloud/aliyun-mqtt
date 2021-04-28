@@ -10,6 +10,12 @@
 
 以下为使用 simps/mqtt 来实现之前所提供的 Mosquitto-PHP 的示例代码
 
+```bash
+git clone https://github.com/simps-cloud/aliyun-mqtt.git
+cd aliyun-mqtt
+composer install
+```
+
 > 示例代码仅实现了测试逻辑，具体业务使用还需要进一步完善。
 
 - 配置文件
