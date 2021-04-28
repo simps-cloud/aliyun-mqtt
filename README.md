@@ -2,9 +2,9 @@
 
 使用 [simps/mqtt](https://github.com/simps/mqtt) 调用阿里云的[微消息队列 MQTT 版](https://www.aliyun.com/product/mq4iot)
 
-在阿里云的文档中PHP推荐的SDK是 [Mosquitto-PHP](https://github.com/mgdm/Mosquitto-PHP) ，这是一个基于回调和异步操作的 PHP MQTT 扩展，同时还依赖 `libmosquitto`。
+在阿里云的文档中 PHP 推荐的 SDK 是 [Mosquitto-PHP](https://github.com/mgdm/Mosquitto-PHP) ，这是一个基于回调和异步操作的 PHP MQTT 扩展，同时还依赖 `libmosquitto`。
 
-而 [simps/mqtt](https://github.com/simps/mqtt) 是纯 PHP 代码实现的协议解析，客户端实现基于 Swoole 的同步阻塞客户端和协程客户端，可以用于PHP-FPM和CLI两种模式。
+而 [simps/mqtt](https://github.com/simps/mqtt) 是纯 PHP 代码实现的协议解析，客户端实现基于 Swoole 的同步阻塞客户端和协程客户端，可以用于 PHP-FPM 和 CLI 两种模式。
 
 并且 [simps/mqtt](https://github.com/simps/mqtt) 支持 MQTT 5.0 协议，是 PHP 首个支持 MQTT 5.0 协议的类库，后期如果阿里云的微消息队列 MQTT 版支持了 MQTT 5.0 协议，可以无缝升级。
 
@@ -33,7 +33,7 @@ return [
 ];
 ```
 
-- 单独使用MQTT消息收发示例
+- 单独使用 MQTT 消息收发示例
 
 [sendMessageToMQTT.php](https://github.com/simps-cloud/aliyun-mqtt/blob/main/sendMessageToMQTT.php)
 
@@ -102,18 +102,18 @@ run(function () {
 });
 ```
 
-- MQTT签名示例
+- MQTT 签名示例
 
 [connectUseSignatureMode.php](https://github.com/simps-cloud/aliyun-mqtt/blob/main/connectUseSignatureMode.php)
 
-- MQTT Token示例
+- MQTT Token 示例
 
 [connectUseTokenMode.php](https://github.com/simps-cloud/aliyun-mqtt/blob/main/connectUseTokenMode.php)
 
-- MQTT发送顺序消息RocketMQ订阅顺序消息示例
+- MQTT 发送顺序消息 RocketMQ 订阅顺序消息示例
 
 [sendOrderMessage.php](https://github.com/simps-cloud/aliyun-mqtt/blob/main/sendOrderMessage.php)
 
-- P2P消息收发模式
+- P2P 消息收发模式
 
 [sendP2PMessageToMQTT.php](https://github.com/simps-cloud/aliyun-mqtt/blob/main/sendP2PMessageToMQTT.php)
