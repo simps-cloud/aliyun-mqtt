@@ -41,25 +41,29 @@ run(function () {
             'package_max_length' => 2 * 1024 * 1024,
         ]);
 
-    // 初始化客户端
-    $client = new Client($config['end_point'], $port, $clientConfig);
+    try {
+        // 初始化客户端
+        $client = new Client($config['end_point'], $port, $clientConfig);
 
-    $connect = $client->connect($cleanSession);
-    // 连接状态
-    var_dump($connect);
+        $connect = $client->connect($cleanSession);
+        // 连接状态
+        var_dump($connect);
 
-    $topics[$config['topic']] = $qos;
-    $subStatus = $client->subscribe($topics);
-    // 订阅状态
-    var_dump($subStatus);
+        $topics[$config['topic']] = $qos;
+        $subStatus = $client->subscribe($topics);
+        // 订阅状态
+        var_dump($subStatus);
 
-    $publishStatus = $client->publish($config['topic'], "Hello MQTT PHP Demo", $qos);
-    // 发布状态
-    var_dump($publishStatus);
+        $publishStatus = $client->publish($config['topic'], "Hello MQTT PHP Demo", $qos);
+        // 发布状态
+        var_dump($publishStatus);
 
-    $buffer = $client->recv();
-    // 订阅消息接收
-    var_dump($buffer);
+        $buffer = $client->recv();
+        // 订阅消息接收
+        var_dump($buffer);
 
-    echo "Finished";
+        echo 'Finished';
+    } catch (\Throwable $e) {
+        echo $e->getMessage();
+    }
 });
